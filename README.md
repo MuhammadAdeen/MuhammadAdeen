@@ -39,7 +39,7 @@ I build AI-powered tools, cross-platform mobile apps and the backend APIs behind
     </td>
     <td width="33%" valign="top">
       <h3>Vouch</h3>
-      <p>B2B resource exchange app where businesses trade skills and services with an internal credit system. <b>Sole designer and developer.</b></p>
+      <p>B2B resource exchange app where businesses trade services with a credit system. <b>Sole designer and developer.</b></p>
       <img src="https://img.shields.io/badge/React_Native-8B7CF6?style=flat-square" alt="React Native"/>
       <img src="https://img.shields.io/badge/Expo-8B7CF6?style=flat-square" alt="Expo"/>
       <img src="https://img.shields.io/badge/Go-8B7CF6?style=flat-square" alt="Go"/>
@@ -100,7 +100,7 @@ Backend engineer responsible for API development and database management. I wrot
 
 **What I built**
 
-A full-stack cross-platform mobile app where businesses trade skills and services using an internal credit system called Vouch Credits. Businesses post what they need or offer, match with complementary businesses, negotiate through in-app messaging, and complete exchanges that build their Vouch Score, a reputation metric that grows with every verified trade.
+A full-stack cross-platform mobile app where businesses trade services using a credit system called Vouch Credits. Businesses post what they need or offer, match with complementary businesses, and complete exchanges that build their Score, a reputation metric that grows with every verified trade.
 
 **Technologies**
 
@@ -124,9 +124,8 @@ Sole designer and developer. I built the entire product from concept to implemen
 
 - **Vouch Credits**: atomic credit transfer through a PostgreSQL stored procedure (`transfer_vouch_credits`) that validates balances, updates both parties, logs transactions and marks the exchange complete in a single transaction, preventing race conditions and partial state
 - **Vouch Score**: reputation engine that increments on every completed exchange and recalculates from average review ratings, giving businesses a visible trust signal
-- **Post feed**: filterable by city, post type (need/offer) and status with server-side pagination; business metadata (name, avatar, Vouch Score) is joined at the database layer
+- **Post feed**: filterable by city, post type and status with server-side pagination; business metadata (name, avatar, Vouch Score) is joined at the database layer
 - **Row Level Security**: every Supabase table is protected with RLS policies; businesses can only modify their own records and messages are scoped to exchange participants
-- **Alliance Groups**: businesses join city- and category-based alliances for community discovery
 - **Dual theme**: light mode (#355E3B green + #faf9f4 cream) and dark mode (#355E3B green + #0a0a0a black) with a system-level toggle
 - **Cross-platform**: one codebase targeting iOS and Android through Expo EAS Build
 
